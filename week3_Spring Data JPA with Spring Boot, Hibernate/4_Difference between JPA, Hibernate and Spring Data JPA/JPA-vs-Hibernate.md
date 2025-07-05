@@ -64,6 +64,7 @@ public class EmployeeService {
     }
 }
 
+---
 
 ### Hibernate Example
 
@@ -85,4 +86,51 @@ public Integer addEmployee(Employee employee){
         session.close(); 
     }
     return employeeID;
+}
+
+---
+
+##  Spring Data JPA Example
+
+Spring Data JPA is part of the Spring ecosystem that helps in abstracting boilerplate code for database access. It internally uses JPA (with Hibernate by default) and allows you to interact with databases using simple interfaces.
+
+---
+
+###  EmployeeRepository.java
+
+```java
+package com.example.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import com.example.model.Employee;
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+}
+
+
+---
+
+###  EmployeeService.java
+
+```java
+package com.example.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import com.example.model.Employee;
+import com.example.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService {
+
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
+    @Transactional
+    public void addEmployee(Employee employee) {
+        employeeRepository.save(employee);
+    }
 }
