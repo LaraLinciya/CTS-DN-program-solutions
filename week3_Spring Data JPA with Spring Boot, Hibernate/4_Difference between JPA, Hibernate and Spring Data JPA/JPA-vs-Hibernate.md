@@ -62,6 +62,8 @@ public class EmployeeService {
         entityManager.persist(employee);
     }
 }
+```
+
 Plain JPA code using EntityManager
 
 Requires a provider (like Hibernate)
