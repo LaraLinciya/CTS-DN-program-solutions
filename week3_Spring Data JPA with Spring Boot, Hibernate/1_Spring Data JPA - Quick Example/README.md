@@ -4,29 +4,30 @@ This is a demo project for understanding Spring Data JPA, Hibernate, and MySQL i
 
 ---
 
-## 📁 Project Structure
-
 orm-learn/
 │
 ├── src/
-│   ├── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── cognizant/
-│       │           └── ormlearn/
-│       │               ├── OrmLearnApplication.java
-│       │               ├── model/
-│       │               │   └── Country.java
-│       │               ├── repository/
-│       │               │   └── CountryRepository.java
-│       │               └── service/
-│       │                   └── CountryService.java
-│       │
-│       └── resources/
-│           ├── application.properties
-│           └── country.sql              ← (Optional: schema/data script)
-│ 
-└──  pom.xml
+│ └── main/
+│ ├── java/
+│ │ └── com/
+│ │ └── cognizant/
+│ │ └── ormlearn/
+│ │ ├── OrmLearnApplication.java
+│ │ ├── model/
+│ │ │ └── Country.java
+│ │ ├── repository/
+│ │ │ └── CountryRepository.java
+│ │ └── service/
+│ │ └── CountryService.java
+│ │
+│ └── resources/
+│ ├── application.properties
+│ └── country.sql ← (Optional: schema/data script)
+│
+└── pom.xml
+
+Copy
+Edit
 
 
 # OrmLearn - Spring Data JPA Hands-On
