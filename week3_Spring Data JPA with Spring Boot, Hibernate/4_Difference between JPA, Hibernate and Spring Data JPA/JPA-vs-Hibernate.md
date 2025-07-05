@@ -1,8 +1,8 @@
-# 🧩 Hands-on 4: Difference between JPA, Hibernate, and Spring Data JPA
+#  Hands-on 4: Difference between JPA, Hibernate, and Spring Data JPA
 
 ---
 
-## 📘 Java Persistence API (JPA)
+##  Java Persistence API (JPA)
 
 - JPA is a **Java specification (JSR 338)** for accessing, persisting, and managing data between Java objects and a relational database.
 - It is just an interface – does not provide actual implementation.
@@ -11,7 +11,7 @@
 
 ---
 
-## 🔧 Hibernate
+##  Hibernate
 
 - Hibernate is an **ORM (Object Relational Mapping)** tool.
 - It is the **most popular implementation of JPA**.
@@ -20,7 +20,7 @@
 
 ---
 
-## 🌱 Spring Data JPA
+##  Spring Data JPA
 
 - Spring Data JPA is part of the **Spring ecosystem**.
 - It is a **wrapper over JPA/Hibernate** that reduces boilerplate code.
@@ -30,7 +30,7 @@
 
 ---
 
-## 💻 Code Comparison
+##  Code Comparison
 
 ### Hibernate Example
 
