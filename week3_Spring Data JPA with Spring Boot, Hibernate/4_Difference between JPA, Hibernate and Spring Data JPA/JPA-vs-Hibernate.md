@@ -2,6 +2,20 @@
 
 ---
 
+##  Difference Between JPA, Hibernate, and Spring Data JPA
+
+| Feature               | JPA                         | Hibernate                       | Spring Data JPA                            |
+|----------------------|-----------------------------|----------------------------------|--------------------------------------------|
+| Type                 | Specification               | Implementation of JPA           | Framework built on top of JPA/Hibernate    |
+| Boilerplate Code     | Medium                      | High                             | Very Low                                   |
+| Implementation Needed| Yes (e.g., Hibernate)       | Already provides implementation | Uses Hibernate (or others) internally      |
+| Transaction Mgmt     | Manual                      | Manual                           | Auto-managed by Spring                     |
+| Abstraction Level    | Base layer                  | Middle layer                     | Highest layer (Most simplified)            |
+
+---
+
+---
+
 ##  Java Persistence API (JPA)
 
 - JPA is a **Java specification (JSR 338)** for accessing, persisting, and managing data between Java objects and a relational database.
@@ -31,6 +45,25 @@
 ---
 
 ##  Code Comparison
+
+###  1. JPA (Using EntityManager)
+
+```java
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
+
+public class EmployeeService {
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    @Transactional
+    public void addEmployee(Employee employee) {
+        entityManager.persist(employee);
+    }
+}
+
 
 ### Hibernate Example
 
