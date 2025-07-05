@@ -1,8 +1,8 @@
-# 🧩 Hands-on 4: Difference between JPA, Hibernate, and Spring Data JPA
+#  Hands-on 4: Difference between JPA, Hibernate, and Spring Data JPA
 
 ---
 
-## 📊 Difference Between JPA, Hibernate, and Spring Data JPA
+##  Difference Between JPA, Hibernate, and Spring Data JPA
 
 | Feature               | JPA                         | Hibernate                       | Spring Data JPA                            |
 |----------------------|-----------------------------|----------------------------------|--------------------------------------------|
@@ -14,38 +14,39 @@
 
 ---
 
-## 📘 Java Persistence API (JPA)
+---
+
+##  Java Persistence API (JPA)
 
 - JPA is a **Java specification (JSR 338)** for accessing, persisting, and managing data between Java objects and a relational database.
-- It defines standard annotations and APIs.
-- It does not provide actual implementation.
-- Needs a JPA provider like **Hibernate** underneath.
+- It is just an interface – does not provide actual implementation.
+- JPA defines the standard annotations and APIs.
+- Needs a provider like **Hibernate** to be used in a real application.
 
 ---
 
-## 🔧 Hibernate
+##  Hibernate
 
-- Hibernate is the **most popular implementation** of JPA.
-- It is an **ORM (Object Relational Mapping)** tool.
-- Provides features like:
-  - Session & Transaction management
-  - Caching support
-  - Complex mapping strategies
+- Hibernate is an **ORM (Object Relational Mapping)** tool.
+- It is the **most popular implementation of JPA**.
+- Provides additional features beyond the JPA specification.
+- Manages session, transaction, caching, and complex mappings.
 
 ---
 
-## 🌱 Spring Data JPA
+##  Spring Data JPA
 
 - Spring Data JPA is part of the **Spring ecosystem**.
-- It is a **wrapper over JPA/Hibernate**.
-- Reduces boilerplate by using repository interfaces.
-- Supports automatic query generation and transaction management.
+- It is a **wrapper over JPA/Hibernate** that reduces boilerplate code.
+- It **does not implement JPA itself**.
+- Allows developers to interact with the database using interfaces and method names.
+- Provides built-in **transaction management** and dynamic query generation.
 
 ---
 
-## 💻 Code Comparison
+##  Code Comparison
 
-### 🟦 1. JPA (Using EntityManager)
+###  1. JPA (Using EntityManager)
 
 ```java
 import jakarta.persistence.EntityManager;
@@ -63,52 +64,39 @@ public class EmployeeService {
     }
 }
 ```
+###  2. Hibernate 
 
-Plain JPA code using EntityManager
+```java
+// Manual Hibernate session management
+public Integer addEmployee(Employee employee){
+    Session session = factory.openSession();
+    Transaction tx = null;
+    Integer employeeID = null;
 
-Requires a provider (like Hibernate)
-
-Needs transaction and entity management setup
-
-🟨 2. Hibernate Example
-java
-Copy
-Edit
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.HibernateException;
-
-public class EmployeeDAO {
-
-    public Integer addEmployee(Employee employee){
-        Session session = factory.openSession();
-        Transaction tx = null;
-        Integer employeeID = null;
-
-        try {
-            tx = session.beginTransaction();
-            employeeID = (Integer) session.save(employee); 
-            tx.commit();
-        } catch (HibernateException e) {
-            if (tx != null) tx.rollback();
-            e.printStackTrace(); 
-        } finally {
-            session.close(); 
-        }
-        return employeeID;
+    try {
+        tx = session.beginTransaction();
+        employeeID = (Integer) session.save(employee); 
+        tx.commit();
+    } catch (HibernateException e) {
+        if (tx != null) tx.rollback();
+        e.printStackTrace(); 
+    } finally {
+        session.close(); 
     }
+    return employeeID;
 }
-Native Hibernate API usage
 
-More boilerplate code than JPA
+```
 
-Needs manual session and transaction management
+##  3. Spring Data JPA 
 
-🟩 3. Spring Data JPA
-✅ EmployeeRepository.java
-java
-Copy
-Edit
+Spring Data JPA is part of the Spring ecosystem that helps in abstracting boilerplate code for database access. It internally uses JPA (with Hibernate by default) and allows you to interact with databases using simple interfaces.
+
+---
+
+###  EmployeeRepository.java
+
+```java
 package com.example.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -118,10 +106,13 @@ import com.example.model.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 }
-✅ EmployeeService.java
-java
-Copy
-Edit
+
+
+```
+
+###  EmployeeService.java
+
+```java
 package com.example.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -141,9 +132,4 @@ public class EmployeeService {
         employeeRepository.save(employee);
     }
 }
-Clean and concise
-
-No implementation code needed
-
-Spring Boot handles transaction, session, and query execution
-
+```
