@@ -1,4 +1,4 @@
-# SpringLearn - Load Country Bean from XML (Hands-On 4)
+# SpringLearn - Load Country Bean from XML 
 
 This hands-on demonstrates how to configure and load a Java bean (`Country`) using a Spring XML configuration file (`country.xml`) in a simple Spring Core application.
 
