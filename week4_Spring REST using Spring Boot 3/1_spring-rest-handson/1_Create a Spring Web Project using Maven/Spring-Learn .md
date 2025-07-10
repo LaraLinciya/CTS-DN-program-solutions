@@ -1,4 +1,4 @@
-# SpringLearn - Spring Boot Web Project Setup (Hands-On 1)
+# SpringLearn - Spring Boot Web Project Setup 
 
 This is a basic Spring Boot project setup using Maven to initialize a web application with Spring Boot DevTools and Spring Web dependency.
 
