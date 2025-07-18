@@ -4,7 +4,7 @@ This hands-on demonstrates how to build a simple RESTful web service using Sprin
 
 ---
 
-## 🧪 Objective
+##  Objective
 
 To implement a REST API using:
 - Spring Boot Web
@@ -13,7 +13,7 @@ To implement a REST API using:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Java 21  
 - Spring Boot 3.x  
@@ -25,7 +25,7 @@ To implement a REST API using:
 
 ---
 
-## 🛠️ Steps Performed
+##  Steps Performed
 
 1. Set server port to `8083` in `application.properties`.
 2. Created a `HelloController` class with the `/hello` endpoint.
@@ -35,7 +35,7 @@ To implement a REST API using:
 
 ---
 
-## 🌐 Endpoint Details
+##  Endpoint Details
 
 - **Method:** GET  
 - **URL:** `http://localhost:8083/hello`  
@@ -45,7 +45,7 @@ To implement a REST API using:
 
 ---
 
-## 📂 Key Files & Locations
+## Key Files & Locations
 
 | **File Name**                | **Location**                                               |
 |-----------------------------|-------------------------------------------------------------|
