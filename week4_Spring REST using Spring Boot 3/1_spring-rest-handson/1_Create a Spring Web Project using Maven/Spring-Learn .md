@@ -4,7 +4,7 @@ This is a basic Spring Boot project setup using Maven to initialize a web applic
 
 ---
 
-## 🧪 Objective
+##  Objective
 
 To learn how to:
 - Create a Spring Boot project using [start.spring.io](https://start.spring.io)
@@ -13,7 +13,7 @@ To learn how to:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Java 17+ or 21  
 - Spring Boot 3.x  
@@ -22,7 +22,7 @@ To learn how to:
 
 ---
 
-## 🛠️ Steps Performed
+##  Steps Performed
 
 1. Project generated using Spring Initializr with:
    - Group: `com.cognizant`
@@ -41,7 +41,7 @@ To learn how to:
 
 ---
 
-## 📂 Key Files & Locations
+##  Key Files & Locations
 
 | **File Name**                | **Location**                                             |
 |-----------------------------|-----------------------------------------------------------|
