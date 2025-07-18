@@ -3,7 +3,7 @@
 This is a demo project for understanding Spring Data JPA, Hibernate, and MySQL integration.
 
 ---
-## 📂 Key Files & Locations
+##  Key Files & Locations
 
 | File Name                | Location                                                   |
 |--------------------------|------------------------------------------------------------|
