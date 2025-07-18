@@ -4,7 +4,7 @@ This hands-on demonstrates how to build a Spring Boot RESTful **authentication s
 
 ---
 
-## 🧪 Objective
+##  Objective
 
 To implement a JWT-based authentication system that:
 - Accepts credentials using Basic Auth (`-u user:pwd`)
@@ -14,7 +14,7 @@ To implement a JWT-based authentication system that:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Java 21  
 - Spring Boot 3.x  
@@ -26,7 +26,7 @@ To implement a JWT-based authentication system that:
 
 ---
 
-## 🛠️ Steps Performed
+## Steps Performed
 
 1. **Created `JwtUtil.java`** to generate a secure JWT using HS256 algorithm.
 2. **Created `AuthenticationController.java`** with endpoint `/authenticate` to return the token.
@@ -37,7 +37,7 @@ To implement a JWT-based authentication system that:
 
 ---
 
-## 📂 Key Files & Locations
+##  Key Files & Locations
 
 | **File Name**                | **Location**                                               |
 |-----------------------------|------------------------------------------------------------|
@@ -50,7 +50,7 @@ To implement a JWT-based authentication system that:
 
 ---
 
-## 🌐 Endpoint Details
+##  Endpoint Details
 
 ### 🔐 **Authenticate and Get Token**
 
