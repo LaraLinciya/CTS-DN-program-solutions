@@ -4,7 +4,7 @@ This hands-on demonstrates how to build a Spring Boot RESTful service that retur
 
 ---
 
-## 🧪 Objective
+##  Objective
 
 To implement a REST API that:
 - Accepts a country code as a path variable
@@ -14,7 +14,7 @@ To implement a REST API that:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Java 21  
 - Spring Boot 3.x  
@@ -26,7 +26,7 @@ To implement a REST API that:
 
 ---
 
-## 🛠️ Steps Performed
+##  Steps Performed
 
 1. Created `Country.java` model class with `code` and `name`.
 2. Configured `country.xml` with a list of predefined country beans.
@@ -37,7 +37,7 @@ To implement a REST API that:
 
 ---
 
-## 📂 Key Files & Locations
+##  Key Files & Locations
 
 | **File Name**                | **Location**                                               |
 |-----------------------------|------------------------------------------------------------|
@@ -51,7 +51,7 @@ To implement a REST API that:
 
 ---
 
-## 🌐 Endpoint Details
+##  Endpoint Details
 
 - **Method:** GET  
 - **URL:** `http://localhost:8083/countries/{code}`  
