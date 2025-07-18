@@ -4,7 +4,7 @@ This hands-on demonstrates how to build a RESTful web service using Spring Boot 
 
 ---
 
-## 🧪 Objective
+##  Objective
 
 To implement a REST API using:  
 - Spring Boot Web  
@@ -14,7 +14,7 @@ To implement a REST API using:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Java 21  
 - Spring Boot 3.x  
@@ -26,7 +26,7 @@ To implement a REST API using:
 
 ---
 
-## 🛠️ Steps Performed
+##  Steps Performed
 
 1. Created a Spring XML file (`country.xml`) defining the India country bean.
 2. Configured Spring to load the XML bean configuration.
@@ -38,7 +38,7 @@ To implement a REST API using:
 
 ---
 
-## 📂 Key Files & Locations
+##  Key Files & Locations
 
 | **File Name**               | **Location**                                               |
 |-----------------------------|------------------------------------------------------------|
@@ -52,7 +52,7 @@ To implement a REST API using:
 
 ---
 
-## 🌐 Endpoint Details
+##  Endpoint Details
 
 - **Method:** GET  
 - **URL:** `http://localhost:8083/country`  
