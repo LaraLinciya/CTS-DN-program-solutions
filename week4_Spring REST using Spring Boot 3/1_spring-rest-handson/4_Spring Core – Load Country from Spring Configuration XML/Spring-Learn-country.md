@@ -4,7 +4,7 @@ This hands-on demonstrates how to configure and load a Java bean (`Country`) usi
 
 ---
 
-## 🧪 Objective
+##  Objective
 
 To demonstrate how to:
 - Configure a Java bean using Spring's XML-based configuration.
@@ -13,7 +13,7 @@ To demonstrate how to:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - Java 21  
 - Spring Core (Context)  
@@ -23,7 +23,7 @@ To demonstrate how to:
 
 ---
 
-## 🛠️ Steps Performed
+##  Steps Performed
 
 1. Created a Java class `Country` with fields `code` and `name`, and added debug logs in constructor, getters, and setters.
 2. Configured a Spring XML file `country.xml` to define the `country` bean.
@@ -33,7 +33,7 @@ To demonstrate how to:
 
 ---
 
-## 📂 Key Files & Locations
+##  Key Files & Locations
 
 | **File Name**                | **Location**                                             |
 |-----------------------------|-----------------------------------------------------------|
